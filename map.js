@@ -115,7 +115,6 @@ const animated = async (view, layer, layerView, sequence, route, max) => {
   query.outSpatialReference = view.spatialReference;
   const result = await layer.queryFeatures(query);
   highlights = layerView.highlight(result.features);
-  highlights?.remove();
 
   if (result.features.length) {
     const feature = result.features[0];
